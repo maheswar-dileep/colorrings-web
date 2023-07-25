@@ -10,6 +10,19 @@
         });
     });
 
+
+    // init Masonry
+var $grid = $('.home-grid').masonry({
+    itemSelector: '.home-grid-item',
+    percentPosition: true,
+    columnWidth: '.home-grid-sizer'
+  });
+  
+  // layout Masonry after each image loads
+  $grid.imagesLoaded().progress( function() {
+    $grid.masonry();
+  });  
+
     // :: Fullscreen Active Code
     $window.on('resizeEnd', function () {
         $(".full_height").height($window.height());
