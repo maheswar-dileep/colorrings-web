@@ -21,7 +21,8 @@
 /* :: Base CSS */
 * {
   margin: 0;
-  padding: 0; }
+  padding: 0;
+}
 
 body {
   font-family: "Roboto", sans-serif; }
@@ -582,6 +583,64 @@ img {
 /* :: Menu Open CSS */
 .menu-open .mainMenu {
   right: 0; }
+
+ /*home screen porfolio*/
+
+  * { box-sizing: border-box; }
+
+.home-grid:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.home-grid-sizer,
+.home-grid-item {
+  width: 33.333%;
+}
+@media (max-width: 575px) {
+  .home-grid-sizer,
+  .home-grid-item {
+    width: 50%;
+  }
+}
+@media (min-width: 576px) and (max-width: 767px) {
+  .home-grid-sizersizer,
+  .home-grid-item {
+    width: 50%;
+  }
+}
+
+/* To change the amount of columns on larger devices, uncomment the code below */
+
+/* @media (min-width: 768px) and (max-width: 991px) {
+  .home-grid-sizer,
+  .home-grid-item {
+    width: 33.333%;
+  }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  .home-grid-sizer,
+  .home-grid-item {
+    width: 25%;
+  }
+}
+@media (min-width: 1200px) {
+  .home-grid-sizer,
+  .home-grid-item {
+    width: 20%;
+  }
+} */
+
+.home-grid-item {
+  float: left;
+}
+
+.home-grid-item img {
+  display: block;
+  max-width: 100%;
+  padding:5px;
+}
 
 /* :: Hero Slides Area CSS */
 .hero-slides .single-hero-slide {
@@ -1353,6 +1412,7 @@ img {
           top: 0;
           left: auto;
           right: 0; } }
+
 
 /* :: Shortcode Area CSS */
 .elements-title h2 {
